@@ -1,4 +1,66 @@
-\input{cv-format.tex}
+\documentclass[11pt]{article}
+
+\usepackage{url}
+\usepackage{ulem}
+\usepackage{paralist}
+\usepackage[shortlabels]{enumitem}
+%\setdefaultleftmargin{1em}{}{}{}{.5em}{.5em}
+
+% squeezing more space 
+\usepackage{microtype}
+
+% page layout required by the sponsor
+\usepackage[letterpaper,left=1in,right=1in,top=1in,bottom=1in]{geometry}
+
+% Use times new roman font, which requires xelatex other than pdflatex
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% Customize the section format
+\usepackage{titlesec}
+%\titleformat{\chapter}{\bfseries\sffamily}{\thechapter}{12pt}{}
+\titleformat{\section}{\bfseries\scshape}{\thesection}{11pt}{}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{12pt}{}
+\titleformat{\subsubsection}{\it}{\thesubsubsection}{12pt}{}
+%\titlespacing*{\section}{0pt}{1ex plus .5ex minus .5ex}{1ex plus .2ex minus .5ex}
+%\titlespacing*{\subsection}{0pt}{.2ex plus .5ex minus .5ex}{.2ex plus .2ex minus .5ex}
+
+% header and footer
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\fancyhead{}
+%\renewcommand\headrulewidth{0pt}
+\fancyhead[C]{\textsc{Curriculu Vitae - Lei Xu}}
+\fancyfoot[C]{\thepage\ of \pageref{LastPage}}
+\pagestyle{fancy}
+
+% cross page table
+\usepackage{longtable}
+\usepackage[table,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{makecell}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+
+\normalem
+
+\usepackage{natbib}
+\usepackage{bibentry}
+%\usepackage{hanging}
+\newcommand\publication[1]{%
+    \smallskip\par\hangpara{1.5em}{1}\bibentry{#1}\smallskip
+}
+
+
+% no indent in text
+%\setlength{\parindent}{0pt}
+
+% self defined macros
+\newcommand{\para}[1]{\smallskip\noindent\textbf{#1.~}}
+\newcommand{\parau}[1]{\smallskip\noindent\uline{#1.~}}
+
+\usepackage{etaremune}
 
 \begin{document}
 
