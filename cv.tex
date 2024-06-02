@@ -39,9 +39,11 @@
 \usepackage[table,dvipsnames]{xcolor}
 \usepackage{enumitem}
 \usepackage{makecell}
-\setlength{\LTpre}{0pt}
+\setlength{\LTpre}{1pt}
 \setlength{\LTpost}{0pt}
 
+\AtBeginEnvironment{longtable} {\setlist[itemize]{nosep, wide=0pt, leftmargin=*, before=\vspace*{-0.5\baselineskip}, after=\vspace*{\dimexpr1ex-\baselineskip}}}
+\renewcommand{\arraystretch}{1.1}
 
 \normalem
 
@@ -86,8 +88,10 @@
 
 \input{sec-funding}
 
-\input{sec-service}
+\input{sec-professional-service}
 
 \input{sec-teaching}
+
+\input{sec-dep-uni-services}
 
 \end{document}
